@@ -302,6 +302,8 @@ Futures allow you to give instructions now (functions) that will be applied at a
 		public CompletableFuture<U> thenApply(Function<T, U> transformFunction) {}
 	}
 
+## Slides:
+[Here](https://docs.google.com/presentation/d/1XPLE8b4pjLt6wC_ZrVnO5zpncPaquHcH9AxV3aLqfXg/edit#slide=id.g16b52eea47_1_7)
 
 
 
