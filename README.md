@@ -209,3 +209,59 @@ We have created a class (`AreaSummer`) that gives the total area of a set of sha
  1. Have a think, is this a sustainable style of coding?
  2. What if we need to introduce new shapes?
  3. What if an external library creates a new, unknown, `Shape` and tries to use `AreaSummer`?
+
+======================
+
+## Functional programming
+
+A programming style that does not have side effects. E.g.:
+
+	public int a = 0;
+	public void addWithSideEffects(int b) {
+		a += b;
+	}
+
+	public int addWithNoSideEffects(int x, int y) {
+		return x + y;
+	}
+	
+*Why use functional programming?*
+- Less to keep in your head
+- Helps to avoid concurrency issues (no side effects), ease of parallelization in your programs (maximise your multiple cores)
+- Code can be more concise and readable
+
+*Traditional for loop*: (note this also modifies the passed in list)
+
+	public List<Integer> multiplyByTwoWithForLoop(List<Integer> list) {
+		for(int i = 0; i < list.size(); i++) {
+			int doubled = list.get(i) * 2;
+			list.set(i, doubled);
+		}
+		return list;
+	}
+
+*Using stream*: (Has no side effects, list remains unchanged)
+
+	public List<Integer> multiplyByTwoWithStream(List<Integer> list) {
+		return list.stream().map(x -> x * 2).collect(Collectors.toList());
+	}
+
+### Functional features in Java
+
+- Stream is like an iterator that works on one individual elements.
+- A stream is a sequence of elements.
+- It offers an API of operations to be done on the elements in an **immutable** way.
+- Performs operations **lazily**.
+- Can **handle parallel operations** for you if requested.
+- All Java collections can be converted to streams with the built-in `stream()` or `parallelStream()` method.
+
+- There are many operations you can do with streams:
+ - `map`: transforms each element in a stream based on a given function (e.g. double, absolute)
+ - `filter`: filters the stream elements for ones that match a given condition (e.g. even/odd number)
+ - `reduce`: reduces the stream into a single element using a given function (eg. sum, min, max)
+ - etc...
+- [More details on stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
+
+
+
+
