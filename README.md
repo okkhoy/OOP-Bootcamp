@@ -271,15 +271,15 @@ In Java (version 8+ only) they look like this:
 `(a, b) -> a + b`
  - Since Java is strongly typed, the return type and argument types are inferred from the usage.
  
-- In Java functions are actually classes that conform to the Function interface
+In Java functions are actually classes that conform to the Function interface
 
-	`public interface Function<T, U> {
+	public interface Function<T, U> {
 		public U apply(T input) {
 		// do something and return a object of type U
 		}
-	}`
+	}
 	
-- The apply method is called to execute them
+The apply method is called to execute them
 
 	Function<String, String> shout = (str) -> str.toUpperCase();
 	shout.apply('loud noises')
@@ -292,11 +292,11 @@ Java has a multitude of different function interfaces, for example:
 - `Supplier<T>` : a function that takes no argument but returns a result
 - [And many more...](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
 
-- Futures are placeholders which will turn into results at sometime later. E.g. below:
+Futures are placeholders which will turn into results at sometime later. E.g. below:
 
 	public Future<Boolean> saveToDatabase(User user)
 
-- Futures allow you to give instructions now (functions) that will be applied at a later time.
+Futures allow you to give instructions now (functions) that will be applied at a later time.
 
 	public interface CompletableFuture<T> {
 		public CompletableFuture<U> thenApply(Function<T, U> transformFunction) {}
