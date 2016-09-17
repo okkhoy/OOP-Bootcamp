@@ -262,6 +262,47 @@ A programming style that does not have side effects. E.g.:
  - etc...
 - [More details on stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
 
+- When we don't use functional programming, the passed element *may be* changed, so to do something else with that list, we need to create a new function to handle the list.
+- With functional programming, a ** new list is always ** returned.
+
+- A **lambda** expression is simply a function that can be passed around and may be executed later. (0 or more times)
+In Java (version 8+ only) they look like this:
+`(a, b) -> {return a + b}`
+`(a, b) -> a + b`
+ - Since Java is strongly typed, the return type and argument types are inferred from the usage.
+ 
+- In Java functions are actually classes that conform to the Function interface
+
+	public interface Function<T, U> {
+		public U apply(T input) {
+		// do something and return a object of type U
+		}
+	}
+	
+- The apply method is called to execute them
+
+	Function<String, String> shout = (str) -> str.toUpperCase();
+	shout.apply('loud noises')
+	
+Java has a multitude of different function interfaces, for example:
+
+- `Function<T, R>` : a function that accepts one argument and returns a result
+- `Consumer<T>` : a void function that takes one argument
+- `Predicate<T>` : a boolean-valued function that takes one argument
+- `Supplier<T>` : a function that takes no argument but returns a result
+- [And many more...](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
+
+- Futures are placeholders which will turn into results at sometime later. E.g. below:
+	public Future<Boolean> saveToDatabase(User user)
+
+- Futures allow you to give instructions now (functions) that will be applied at a later time.
+
+	public interface CompletableFuture<T> {
+		public CompletableFuture<U> thenApply(Function<T, U> transformFunction) {}
+	}
+
+
+
 
 
 
