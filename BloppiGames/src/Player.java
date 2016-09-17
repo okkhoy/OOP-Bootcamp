@@ -10,6 +10,15 @@ public class Player {
     // ***************
     // Fix this method
     public GameRule findBest(GameRule[] rules){
-        return rules[0];
+        int bestValue = 0;
+        GameRule bestRule = null;
+        for (GameRule r : rules) {
+            int tmpVal = r.calculateResult(values);
+            if (tmpVal > bestValue) {
+                bestValue = tmpVal;
+                bestRule = r;
+            }
+        }       
+        return bestRule;
     }
 }

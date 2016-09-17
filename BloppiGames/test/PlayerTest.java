@@ -5,6 +5,7 @@ import rules.AddEveryOtherRule;
 import rules.AdditionRule;
 import rules.GameRule;
 import rules.MultiplicationRule;
+import rules.MaxRule;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -16,6 +17,7 @@ public class PlayerTest {
     AdditionRule additionRule = new AdditionRule();
     AddEveryOtherRule addEveryOtherRule = new AddEveryOtherRule();
     MultiplicationRule multiplicationRule = new MultiplicationRule();
+    MaxRule maxRule = new MaxRule();
 
     @Test
     public void shouldPreferAddition(){
@@ -39,5 +41,13 @@ public class PlayerTest {
         assertThat(player.findBest(
                 new GameRule[]{additionRule, addEveryOtherRule, multiplicationRule}),
                 is(multiplicationRule));
+    }
+    
+    @Test
+    public void shouldPreferMax() {
+        Player player = new Player(new int[]{-1, -2, 3});
+        assertThat(player.findBest(
+                new GameRule[]{additionRule, addEveryOtherRule, multiplicationRule, maxRule}),
+                is(maxRule));
     }
 }
