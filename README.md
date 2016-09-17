@@ -202,9 +202,9 @@ We have created a class (`AreaSummer`) that gives the total area of a set of sha
 
 ### Exercise 2 - 
 
-- Uncomment `getArea()` from `Shape` and all the shapes.
+- Add `abstract double getArea()`; in `Shape` and implement in all the shapes.
+ - Area calculation formulae are provided.
 - Modify `AreaSummer` to use `getArea()`
-- The first two tests should still pass at this point.
 - Implement the `getArea()` functions on all the shapes and get the test `giveAreaOfAllShapes()` to pass.
  1. Have a think, is this a sustainable style of coding?
  2. What if we need to introduce new shapes?
