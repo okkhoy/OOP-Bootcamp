@@ -10,6 +10,8 @@ public class AreaSummer {
 			}
 			else if (shape instanceof Circle) {
 				total += Math.PI * Math.pow(((Circle) shape).getRadius(), 2);
+			} else if (shape instanceof Rectangle) {
+			    total += ((Rectangle) shape).getHeight() * ((Rectangle)shape).getWidth() ;
 			}
 		}
 		
