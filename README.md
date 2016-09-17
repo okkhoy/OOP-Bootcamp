@@ -21,10 +21,30 @@ OOP Bootcamp bootcamp organize by Thoughtworks at NUS
 
 *Retrospective*
 
+## Coding exercise
+
+There will be many Coding exercises throughout the day.
+To get ready, please download and extract the exercises from here:
+
+http://bit.ly/2cur7DK
+
+Each project is already setup for Eclipse, you should just be able to import the project into Eclipse (File > Import…)
+
+
 
 ## Project: BloppiDate (Encapsulation and abstraction)
 
+### Exercise 1
+On the planet Bloppi, everything is a regular cycle, including their dates.
+- A year has exactly 360 days
+- A month has exactly 30 days
+- Days, months and years are zero based. (i.e. 0-11 are valid months)
+Your task is to implement BloppiDate, which should have a method to print the date in the following format: d/m/y, e.g 5/0/12
 
+### Exercise 2
+Now, there are some new requirements:
+- Create method `diffDays`: given another BloppiDate, you need to return the number of days between the dates.
+- Create method `addDays`: given a number of days, return a new BloppiDate representing that many days in the future (or past if negative)
 
 ### Exercise 3
 Let's change the internal storage of BloppiDate to be a number of days since 0/0/0
