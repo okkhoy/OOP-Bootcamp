@@ -113,3 +113,24 @@ Implement the Player class such that all the tests pass.
 
 Feel free to have some fun making your own rules, perhaps you could make a rule that combines other rules together.
 
+======================
+
+## Project : Dependency Inversion
+
+- High-level modules should not depend on low-level modules. Both should depend on abstractions.
+- Abstractions should not depend upon details. Details should depend upon abstractions.
+
+### Exercise 1
+
+We have a Driver who loves to listen to the Radio while she is driving in the Car. While driving the driver can speedUp, slowDown, listenToRadio, etc. 
+Your task is:
+- To get the tests for the Driver passing.
+
+### Exercise 2
+
+Is the dependency between the Driver to Car and Radio modelled correctly?
+
+- Can we create a new type of car, SportsCar
+- - Behaves like car but accelerates and decelerates in steps of 2.
+
+- How can the Driver easily use SportsCar instead of Car?
