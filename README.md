@@ -93,6 +93,12 @@ Composition allows code re-use by:
 - composing some objects inside another
 - the composite object can then call the methods of the objects that it contains, and possibly add extra behaviour.
 
+- Inheritance should NOT be used as a convenient means for code-reuse
+- Some might say inheritance actually violates encapsulation due to the tight coupling between parent and child classes.
+- If there is no clear object hierarchy or if there are doubts, use composition.
+
+
 ### Exercise 3
 
 - Can we apply composition to overcome our problem of the `CountingStringList` class having dependency on the parent class implementation?
+
