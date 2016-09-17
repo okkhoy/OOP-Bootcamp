@@ -92,3 +92,7 @@ Your task:
 Composition allows code re-use by:
 - composing some objects inside another
 - the composite object can then call the methods of the objects that it contains, and possibly add extra behaviour.
+
+### Exercise 3
+
+- Can we apply composition to overcome our problem of the `CountingStringList` class having dependency on the parent class implementation?
