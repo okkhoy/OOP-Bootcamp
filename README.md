@@ -273,11 +273,11 @@ In Java (version 8+ only) they look like this:
  
 - In Java functions are actually classes that conform to the Function interface
 
-	public interface Function<T, U> {
+	`public interface Function<T, U> {
 		public U apply(T input) {
 		// do something and return a object of type U
 		}
-	}
+	}`
 	
 - The apply method is called to execute them
 
