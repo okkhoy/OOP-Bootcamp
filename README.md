@@ -87,3 +87,8 @@ Your task:
 - Now, what happens if the parent class `MyStringList` changes its implementation of `addAll` to NOT call `add`?
 - What can we do to overcome this problem?
 
+### Composition
+
+Composition allows code re-use by:
+- composing some objects inside another
+- the composite object can then call the methods of the objects that it contains, and possibly add extra behaviour.
