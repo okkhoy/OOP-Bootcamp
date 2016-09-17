@@ -56,7 +56,6 @@ How about `toString` and the constructor?
 
 Do all your tests still pass?
 
-
 ## Project: Bloppians (Inheritance)
 
 *Bloppian inheritance*
@@ -68,4 +67,18 @@ Do all your tests still pass?
 - Ensure all unit tests pass
 
 
-## Project: InheritancePitfalls
+## Project: Inheritance Pitfalls
+
+- Tightly coupled with Super class implementation.
+- Can be inflexible, classes and method are bound by a predefined set of behaviour. 
+- Languages such as Java only allows single inheritance
+
+### Exercise 1
+
+We have `StringList` which allows you to `add` a String or `addAll` Strings in a collection to the list. 
+We also have `CountingStringList` which extends `StringList` and counts the number of elements that have been inserted. 
+
+Your task:
+- Find out why the CountingStringList unit test is failing?
+- Fix the failure without modifying the super class
+
