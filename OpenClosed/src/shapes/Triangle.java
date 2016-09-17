@@ -18,4 +18,9 @@ public class Triangle extends Shape {
 	public int getHeight(){
 		return height;
 	}
+
+    @Override
+    public double getArea() {
+        return (base * height) / 2.0;
+    }
 }

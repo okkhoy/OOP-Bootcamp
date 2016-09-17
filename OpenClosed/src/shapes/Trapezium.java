@@ -24,4 +24,9 @@ public class Trapezium extends Shape {
 	public int getHeight(){
 		return height;
 	}
+
+    @Override
+    public double getArea() {
+        return ((base + top)/2.0 * height);
+    }
 }
