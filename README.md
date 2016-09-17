@@ -134,3 +134,11 @@ Is the dependency between the Driver to Car and Radio modelled correctly?
  - Behaves like car but accelerates and decelerates in steps of 2.
 
 - How can the Driver easily use SportsCar instead of Car?
+
+======================
+
+## Project : LiskovSubstitution
+
+Think of the interface that is exposed.
+
+We cannot replace Car with Helicopter in the test because the Helicopter has to take off before it can accelerate, that the driver doesn't know. Hence it is bad LiskovSubstitution.
