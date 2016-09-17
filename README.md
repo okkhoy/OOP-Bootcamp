@@ -154,3 +154,40 @@ Have a look at the code and think about the questions below:
 - Implement the correct way to model the code so that each User of Car actually needs to only use a subset (hint: interface)
  - Please do not break up the Car class.
 - Can you think of any advantages because you did this?
+
+- Here, notice that both `DriverCarInterface` and `FuelStationInterface` have `checkFuelLevel()` method. 
+- We can extract the `checkFuelLevel()` to a new `Fillable` interface, make `DriverCarInterface` and `FuelStationInterface` implement the `Fillable`.
+- This way we create a diamond like interface dependency.
+
+======================
+
+## Project : SingleResponsibility
+
+- Do one thing ...
+- Do it well!
+
+### Exercise 1
+
+Our Car can speedUp and slowDown, and it also handles all engine responsibilities and fuel responsibilities.
+
+- Is the Car class doing more than one thing?
+- Can we break up the class so that they are doing only one thing?
+ - Remember the exposed interface of Car should not change.
+- How should we handle the useFuel method? Which class does it belong to?
+ - Remember to consider the other principles if they help.
+
+======================
+
+## Project : OpenClosed
+
+- Closed for modification
+- Open for extension
+
+### Exercise 1 - Area Calculation
+
+We have created a class (`AreaSummer`) that gives the total area of a set of shapes… currently it can only handle `Squares` and `Circles`.
+
+- In the same style of code, modify the `AreaSummer` to support `Rectangles` and get the test `giveAreaOfSquareCircleAndRectanlge()` to pass.
+ 1. Have a think, is this a sustainable style of coding?
+ 2. What if we need to introduce new shapes?
+ 3. What if an external library creates a new, unknown, Shape and tries to use AreaSummer?
