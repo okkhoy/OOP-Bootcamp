@@ -1,45 +1,32 @@
-public class Car implements EngineInterface, FuelTankInterface {
+public class Car {
 
-    private int rpm = 0;
-    private int fuelLevel;
-
+    private Engine engine;
+    private FuelTank fuelTank;
+    
     public Car(int initialFuelLevel){
-        fuelLevel = initialFuelLevel;
+        fuelTank = new FuelTank(initialFuelLevel);
+        engine = new Engine(fuelTank);
     }
 
-    @Override
     public void speedUp() {
-        rpm += 1;
-        useFuel(rpm);
+        engine.speedUp();
     }
-
-    @Override
+    
     public void slowDown() {
-        if (rpm ==  0) return;
-        rpm -= 1;
-        useFuel(rpm);
+        engine.slowDown();
     }
 
-    private void useFuel(int amount) {
-        fuelLevel -= amount;
-        if (fuelLevel < 0){
-            fuelLevel = 0;
-            throw new OutOfFuelException();
-        }
-    }
-
-    @Override
     public int checkRPM() {
-        return rpm;
-    }
+        return engine.checkRPM();
+    }    
 
-    @Override
     public int checkFuelLevel() {
-        return fuelLevel;
+        return fuelTank.checkFuelLevel();
     }
 
-    @Override
     public void fillUp(int amount) {
-        fuelLevel += amount;
+        fuelTank.fillUp(amount);
     }
 }
+
+
