@@ -3,20 +3,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * This is a famous Java example by Joshua Bloch to highlight the pitfalls of inheritance
+ * This is a famous Java example by Joshua Bloch to highlight the pitfalls of
+ * inheritance
  */
-public class CountingList extends MyStringList {
+public class CountingList {
     private int counter = 0;
+    private MyStringList newStringList = new MyStringList();
 
-    @Override
     public void add(String t) {
-        super.add(t);
-        counter ++;
+        newStringList.add(t);
+        counter++;
     }
 
-    @Override
     public void addAll(Collection<String> c) {
-        super.addAll(c);
+        newStringList.addAll(c);
         counter += c.size();
     }
 
@@ -25,6 +25,6 @@ public class CountingList extends MyStringList {
     }
 
     public String toString() {
-        return String.format("Added %d elements: %s", counter, super.concatenateList(", "));
+        return String.format("Added %d elements: %s", counter, newStringList.concatenateList(", "));
     }
 }
