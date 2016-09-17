@@ -176,7 +176,14 @@ Our Car can speedUp and slowDown, and it also handles all engine responsibilitie
  - Remember the exposed interface of Car should not change.
 - How should we handle the useFuel method? Which class does it belong to?
  - Remember to consider the other principles if they help.
-
+ 
+- Notice the way in which we create a `FuelSupplier` interface and make `FuelTank` implement it.
+- Now we make the `Engine` know about the `FuelSupplier`.
+- The `Car` is now composed of `Engine` and `FuelTank`
+- By doing this :
+ - we decouple the `Car` from `Engine` and `FuelTank`.
+ - now, we have `Engine` and `FuelTank` that can be reusable.
+ 
 ======================
 
 ## Project : OpenClosed
