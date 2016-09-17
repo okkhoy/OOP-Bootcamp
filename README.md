@@ -131,6 +131,6 @@ Your task is:
 Is the dependency between the Driver to Car and Radio modelled correctly?
 
 - Can we create a new type of car, SportsCar
-- - Behaves like car but accelerates and decelerates in steps of 2.
+ - Behaves like car but accelerates and decelerates in steps of 2.
 
 - How can the Driver easily use SportsCar instead of Car?

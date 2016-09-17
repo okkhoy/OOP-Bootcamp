@@ -14,8 +14,8 @@ public class DriverTest {
 
     @Before
     public void setup() {
-        vehicle = new Car();
-        radio = new CheapRadio();
+        vehicle = new Helicopter();
+        radio = new ExpensiveRadio();
     }
 
     @Test
