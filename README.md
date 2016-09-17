@@ -165,6 +165,7 @@ Have a look at the code and think about the questions below:
 
 - Do one thing ...
 - Do it well!
+- Instead of having a big Uber class doing everything (possibily crappily), create multiple smaller classes doing only one thing (but doing properly)
 
 ### Exercise 1
 
