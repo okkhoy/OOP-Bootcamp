@@ -1,8 +1,6 @@
 
 public class BloppiDate {
-    // private final int year;
-    // private final int month;
-    // private final int day;
+
     private final int days;
 
     public BloppiDate(int year, int month, int day) {
@@ -13,9 +11,6 @@ public class BloppiDate {
             throw new IllegalArgumentException("Day out of bounds");
         }
 
-        // this.year = year;
-        // this.month = month;
-        // this.day = day;
         if (year < 0) {
             day = -day;
             month = -month;
@@ -35,12 +30,11 @@ public class BloppiDate {
             year++;
             month = month % 12;
         }
-        if(days < 0) {
+        if (days < 0) {
             month = -month;
             day = -day;
         }
         return day + "/" + month + "/" + year;
-        // return this.days+"";
     }
 
     public BloppiDate AddDays(int days) {
@@ -65,12 +59,6 @@ public class BloppiDate {
     }
 
     public int DiffDays(BloppiDate other) {
-        // int days = 0;
-        // days += (other.year - this.year ) * 360;
-        // days += (other.month - this.month) * 30;
-        // days += (other.day - this.day);
-
-        // return days;
         return other.days - this.days;
     }
 }
