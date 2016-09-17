@@ -142,3 +142,15 @@ Is the dependency between the Driver to Car and Radio modelled correctly?
 Think of the interface that is exposed.
 
 We cannot replace Car with Helicopter in the test because the Helicopter has to take off before it can accelerate, that the driver doesn't know. Hence it is bad LiskovSubstitution.
+
+======================
+
+## Project : InterfaceSegregation 
+
+Our Driver’s Car needs some fuel from the FuelStation
+Have a look at the code and think about the questions below:
+
+- Is it correct that Driver and FuelStation should both depend on the entire Car class?
+- Implement the correct way to model the code so that each User of Car actually needs to only use a subset (hint: interface)
+ - Please do not break up the Car class.
+- Can you think of any advantages because you did this?
