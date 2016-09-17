@@ -14,9 +14,9 @@ public class DriverTest {
 	
 	@Before
 	public void setup(){
-//		car = ???
-//		radio = ???
 		driver = new Driver();
+		car = driver.getCar();
+		radio = driver.getRadio();
 	}
 	
     @Test
