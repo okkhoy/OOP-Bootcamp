@@ -1,7 +1,7 @@
 # OOP-Bootcamp
 OOP Bootcamp bootcamp organize by Thoughtworks at NUS
 
-## Project: BloppiDate
+## Project: BloppiDate (Encapsulation and abstraction)
 
 
 
