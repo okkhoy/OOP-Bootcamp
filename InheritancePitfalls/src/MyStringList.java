@@ -7,7 +7,7 @@ public class MyStringList {
 		list.add(t);
 	}
 	public void addAll(Collection<String> t) {
-		t.forEach(this::add);
+		list.addAll(t);
 	}
 	public String concatenateList(String delimiter) {
 		return String.join(delimiter, list);
