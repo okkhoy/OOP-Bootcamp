@@ -199,3 +199,13 @@ We have created a class (`AreaSummer`) that gives the total area of a set of sha
  1. Have a think, is this a sustainable style of coding?
  2. What if we need to introduce new shapes?
  3. What if an external library creates a new, unknown, Shape and tries to use AreaSummer?
+
+### Exercise 2 - 
+
+- Uncomment `getArea()` from `Shape` and all the shapes.
+- Modify `AreaSummer` to use `getArea()`
+- The first two tests should still pass at this point.
+- Implement the `getArea()` functions on all the shapes and get the test `giveAreaOfAllShapes()` to pass.
+ 1. Have a think, is this a sustainable style of coding?
+ 2. What if we need to introduce new shapes?
+ 3. What if an external library creates a new, unknown, `Shape` and tries to use `AreaSummer`?
