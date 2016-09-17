@@ -1,10 +1,10 @@
 public class FuelStation {
 
-    public void fillUp(Car car){
+    public void fillUp(FuelStationInterface car){
         car.fillUpFuel();
     }
 
-    public void fillUpIfLow(Car car){
+    public void fillUpIfLow(FuelStationInterface car){
         if(car.checkFuelLevel() < 5)
             car.fillUpFuel();
     }

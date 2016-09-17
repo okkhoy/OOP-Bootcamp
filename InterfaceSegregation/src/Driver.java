@@ -1,7 +1,7 @@
 public class Driver {
-    private Car car;
+    private DriverCarInterface car;
 
-    public Driver(Car car) {
+    public Driver(DriverCarInterface car) {
 
         this.car = car;
     }
