@@ -1,9 +1,8 @@
 
 public class BloppiDate {
-    // private final int year;
-    // private final int month;
-    // private final int day;
-    private final int days;
+    private final int year;
+    private final int month;
+    private final int day;
 
     public BloppiDate(int year, int month, int day) {
         if (month > 11 || month < 0) {
@@ -13,34 +12,13 @@ public class BloppiDate {
             throw new IllegalArgumentException("Day out of bounds");
         }
 
-        // this.year = year;
-        // this.month = month;
-        // this.day = day;
-        if (year < 0) {
-            day = -day;
-            month = -month;
-        }
-        int _days = year * 360 + month * 30 + day;
-
-        this.days = _days;
+        this.year = year;
+        this.month = month;
+        this.day = day;
     }
 
     public String toString() {
-        int year = days / 360;
-        int _remain = days % 360;
-        int month = _remain / 30;
-        int __remain = _remain % 30;
-        int day = __remain;
-        if (month > 11) {
-            year++;
-            month = month % 12;
-        }
-        if(days < 0) {
-            month = -month;
-            day = -day;
-        }
         return day + "/" + month + "/" + year;
-        // return this.days+"";
     }
 
     public BloppiDate AddDays(int days) {
@@ -65,12 +43,11 @@ public class BloppiDate {
     }
 
     public int DiffDays(BloppiDate other) {
-        // int days = 0;
-        // days += (other.year - this.year ) * 360;
-        // days += (other.month - this.month) * 30;
-        // days += (other.day - this.day);
+        int days = 0;
+        days += (other.year - this.year) * 360;
+        days += (other.month - this.month) * 30;
+        days += (other.day - this.day);
 
-        // return days;
-        return other.days - this.days;
+        return days;
     }
 }
