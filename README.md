@@ -1,6 +1,27 @@
 # OOP-Bootcamp
 OOP Bootcamp bootcamp organize by Thoughtworks at NUS
 
+## Agenda
+
+*Basic OO Principles*
+- Abstraction and Encapsulation
+- Inheritance
+- Polymorphism
+
+*SOLID Principles*
+- Single Responsibility
+- Open Closed
+- Liskov’s Substitution
+- Interface Segregation
+- Dependency Inversion
+
+*Functional Programming*
+- Basic introduction
+- Functional features in Java 8
+
+*Retrospective*
+
+
 ## Project: BloppiDate (Encapsulation and abstraction)
 
 
