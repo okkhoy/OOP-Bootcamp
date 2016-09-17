@@ -102,3 +102,14 @@ Composition allows code re-use by:
 
 - Can we apply composition to overcome our problem of the `CountingStringList` class having dependency on the parent class implementation?
 
+## Project : BloppiGames (Polymorphism)
+
+- Bloppian children love to play number games.
+- Their favourite is to take a list of numbers and a set of game rules.
+
+They like to find the rule that produces the largest result.
+
+Implement the Player class such that all the tests pass.
+
+Feel free to have some fun making your own rules, perhaps you could make a rule that combines other rules together.
+
