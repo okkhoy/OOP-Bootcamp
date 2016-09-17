@@ -82,3 +82,8 @@ Your task:
 - Find out why the CountingStringList unit test is failing?
 - Fix the failure without modifying the super class
 
+### Exercise 2
+
+- Now, what happens if the parent class `MyStringList` changes its implementation of `addAll` to NOT call `add`?
+- What can we do to overcome this problem?
+
