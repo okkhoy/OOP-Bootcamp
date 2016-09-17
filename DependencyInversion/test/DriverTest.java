@@ -17,6 +17,10 @@ public class DriverTest {
 //		car = ???
 //		radio = ???
 		driver = new Driver();
+		car = new SportsCar();
+		radio = new Radio();
+		driver.setCar(car);
+		driver.setRadio(radio);
 	}
 	
     @Test

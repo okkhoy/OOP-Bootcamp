@@ -1,5 +1,5 @@
 public class Car {
-    private int speed = 0;
+    protected int speed = 0;
 
     public void accelerate() {
         speed += 1;
