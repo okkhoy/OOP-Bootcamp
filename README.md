@@ -200,7 +200,7 @@ We have created a class (`AreaSummer`) that gives the total area of a set of sha
  2. What if we need to introduce new shapes?
  3. What if an external library creates a new, unknown, Shape and tries to use AreaSummer?
 
-### Exercise 2 - 
+### Exercise 2 - Area Calculation (better way!)
 
 - Add `abstract double getArea()`; in `Shape` and implement in all the shapes.
  - Area calculation formulae are provided.
