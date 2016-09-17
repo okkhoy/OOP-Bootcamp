@@ -1,4 +1,4 @@
-public class Car {
+public class Car implements DriverCarInterface, FuelStationInterface {
     int fuelLevel;
 
     public Car(int intialFuelLevel){
