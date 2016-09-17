@@ -293,6 +293,7 @@ Java has a multitude of different function interfaces, for example:
 - [And many more...](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
 
 - Futures are placeholders which will turn into results at sometime later. E.g. below:
+
 	public Future<Boolean> saveToDatabase(User user)
 
 - Futures allow you to give instructions now (functions) that will be applied at a later time.
