@@ -17,7 +17,8 @@ public class CountingList extends MyStringList {
     @Override
     public void addAll(Collection<String> c) {
         super.addAll(c);
-        counter += c.size();
+        //c.forEach(this::add);
+        //counter += c.size();
     }
 
     public int getCounter() {
